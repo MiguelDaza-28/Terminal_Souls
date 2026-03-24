@@ -66,15 +66,15 @@ def winner_vf(hp, enemy_hp):
 
 
 def play():
-    hp_heroe = 100
-    hp_enemigo = 120
+    hp_hero = 100
+    hp_enemy = 120
     potions = 3
 
     print("\nWelcome to Terminal Souls\n")
 
-    while hp_heroe > 0 and hp_enemigo > 0:
+    while hp_hero > 0 and hp_enemy > 0:
 
-        status("Hero", hp_heroe, potions, "Enemy", hp_enemigo)
+        status("Hero", hp_hero, potions, "Enemy", hp_enemy)
 
         hp_hero, hp_enemy, potions, valid_turn = turn(
             hp_hero, hp_enemy, potions )
