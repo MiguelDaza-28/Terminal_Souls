@@ -76,18 +76,18 @@ def play():
 
         status("Hero", hp_heroe, potions, "Enemy", hp_enemigo)
 
-        hp_heroe, hp_enemigo, potions, turno_valido = turn(
-            hp_heroe, hp_enemigo, potions)
+        hp_hero, hp_enemy, potions, valid_turn = turn(
+            hp_hero, hp_enemy, potions )
 
-        if not turno_valido:
+        if not valid_turn:
             continue
 
-        if winner_vf(hp_heroe, hp_enemigo):
+        if winner_vf(hp_hero, hp_enemy):
             break
 
-        hp_heroe = enemy_turn(hp_heroe)
+        hp_hero = enemy_turn(hp_hero)
 
-        if winner_vf(hp_heroe, hp_enemigo):
+        if winner_vf(hp_hero, hp_enemy):
             break
 
 
